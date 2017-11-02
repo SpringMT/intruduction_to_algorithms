@@ -1,10 +1,10 @@
-set xrange[0:10]
-
-plot x*x
+set xrange[0:5]
 
 log2(x)=log(x)/log(2)
 
-replot log2(x)
+plot log2(x)
+replot x
 replot x*log2(x)
+replot x*x
 
 pause -1

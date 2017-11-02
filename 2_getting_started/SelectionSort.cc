@@ -14,20 +14,31 @@ void printInfo(std::string test, int n) {
   printf("[INFO] %s %d \n", test.c_str(), n);
 }
 
-int lineraSearch(int array[], int n, int target) {
-  int i;
-  for (i = 0; i < n; i++)
-    if(array[i] == target)
-      return i;
-  return -1;
+void swap(int *xp, int *yp) {
+  int temp = *xp;
+  *xp = *yp;
+  *yp = temp;
+}
+
+void selectionSort(int array[], int n) {
+  int j, i;
+  // 一時的に退避する変数
+  int key, min_index;
+
+  for (i = 0; i < n - 1; i++) {
+      min_index = i;
+      for (j = i + 1; j < n; j++)
+        if (array[j] < array[min_index])
+          min_index = j;
+      swap(&array[min_index], &array[i]);
+  }
 }
 
 int main() {
     int arr[] = {12, 11, 13, 5, 6, 8, 10, 12, 44, 56, 90};
     int n = sizeof(arr)/sizeof(arr[0]);
-    int target = 12;
-    int res = lineraSearch(arr, n, target);
-    printInfo("Result", res);
+    selectionSort(arr, n);
+    printArray(arr, n);
     return 0;
 }
 
