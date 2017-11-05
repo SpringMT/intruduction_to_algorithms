@@ -1,0 +1,2 @@
+- https://github.com/gzc/CLRS/blob/master/C02-Getting-Started/problem.md
+- https://gist.github.com/gurimusan/fcf48d84a1be4096dffdbbfeb8480a67
