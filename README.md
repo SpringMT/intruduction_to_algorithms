@@ -2,6 +2,7 @@
 
 ```
 clang -stdlib=libc++ -lstdc++ InsertionSort.cc
+clang++ -std=c++11 -stdlib=libc++  BubbleSort.cc 
 ```
 
 
